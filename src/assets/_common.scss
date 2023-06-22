@@ -1,6 +1,0 @@
-$gallery-box-width: calc(100vw - 60px);
-$img-box-total-width: calc(($gallery-box-width) / 5);
-$img-width: calc($img-box-total-width * (2 / 3));
-$img-gap: calc($img-box-total-width * (1 / 6));
-$img-width-mobile: calc(($gallery-box-width) / 4);
-$img-gap-mobile: calc($img-width-mobile * 0.3);

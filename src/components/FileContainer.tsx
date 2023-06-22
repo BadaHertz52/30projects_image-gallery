@@ -1,5 +1,5 @@
-import React, {
-  ChangeEvent,
+import {
+  CSSProperties,
   Dispatch,
   SetStateAction,
   useCallback,
@@ -8,8 +8,15 @@ import React, {
 import { useDropzone } from "react-dropzone";
 type FileContainerProps = {
   setImgList: Dispatch<SetStateAction<string[] | undefined>>;
+  boxWidth: string;
 };
 const FileContainer = (props: FileContainerProps) => {
+  const plusBoxStyle: CSSProperties = {
+    width: props.boxWidth,
+    height: props.boxWidth,
+    minWidth: props.boxWidth,
+    minHeight: props.boxWidth,
+  };
   const inputRef = useRef<HTMLInputElement>(null);
   const onDrop = useCallback((acceptedFiles: File[]) => {
     if (acceptedFiles[0]) {
@@ -29,6 +36,7 @@ const FileContainer = (props: FileContainerProps) => {
       <div
         className={`plus-box ${isDragActive ? "on" : ""}`}
         onClick={() => inputRef.current?.click()}
+        style={plusBoxStyle}
       >
         <input type="file" ref={inputRef} {...getInputProps()} />
         {isDragActive ? "drop down" : "+"}

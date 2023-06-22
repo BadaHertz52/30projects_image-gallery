@@ -2,28 +2,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: calc((100vw - 60px) / 5 * 0.1666666667);
 }
 
 .img-box img {
-  width: calc((100vw - 60px) / 5 * 0.6666666667);
-  height: calc((100vw - 60px) / 5 * 0.6666666667);
+  width: 100%;
+  height: 100%;
 }
 
-@media screen and (max-width: 500px) {
-  .img-box-container {
-    gap: calc((100vw - 60px) / 4 * 0.3);
-  }
-  .img-box img {
-    width: calc((100vw - 60px) / 4);
-    height: calc((100vw - 60px) / 4);
-  }
-}
 .plus-box {
-  width: calc((100vw - 60px) / 5 * 0.6666666667);
-  height: calc((100vw - 60px) / 5 * 0.6666666667);
-  min-width: calc((100vw - 60px) / 5 * 0.6666666667);
-  min-height: calc((100vw - 60px) / 5 * 0.6666666667);
   border: 1px solid black;
   font-size: 24px;
   line-height: 24px;
@@ -41,14 +27,6 @@
   display: none;
 }
 
-@media screen and (max-width: 500px) {
-  .plus-box {
-    width: calc((100vw - 60px) / 4);
-    height: calc((100vw - 60px) / 4);
-    min-width: calc((100vw - 60px) / 4);
-    min-height: calc((100vw - 60px) / 4);
-  }
-}
 .container {
   width: 100vw;
   height: 100vh;
@@ -63,21 +41,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
   padding-bottom: 16px;
 }
 .gallery-box.row {
   flex-direction: row;
-  gap: calc((100vw - 60px) / 5 * 0.1666666667);
+}
+.gallery-box.scroll {
   overflow-x: scroll;
 }
 
 .alert {
   text-align: center;
-}
-
-@media screen and (max-width: 500px) {
-  .gallery-box {
-    gap: 40px;
-  }
 }/*# sourceMappingURL=App.css.map */

@@ -1,25 +1,11 @@
-@import "./common";
 .img-box-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: $img-gap;
 }
 .img-box {
   img {
-    width: $img-width;
-    height: $img-width;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .img-box-container {
-    gap: $img-gap-mobile;
-  }
-  .img-box {
-    img {
-      width: $img-width-mobile;
-      height: $img-width-mobile;
-    }
+    width: 100%;
+    height: 100%;
   }
 }

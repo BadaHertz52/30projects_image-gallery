@@ -1,10 +1,4 @@
-@import "./common";
-
 .plus-box {
-  width: $img-width;
-  height: $img-width;
-  min-width: $img-width;
-  min-height: $img-width;
   border: 1px solid black;
   font-size: 24px;
   line-height: 24px;
@@ -20,14 +14,5 @@
   }
   input {
     display: none;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .plus-box {
-    width: $img-width-mobile;
-    height: $img-width-mobile;
-    min-width: $img-width-mobile;
-    min-height: $img-width-mobile;
   }
 }
