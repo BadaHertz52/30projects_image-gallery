@@ -1,8 +1,9 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, Dispatch, SetStateAction } from "react";
 import ImgBox from "./ImgBox";
 
 const ImgBoxContainer = (props: {
   imgList: string[];
+  setImgList: Dispatch<SetStateAction<string[] | undefined>>;
   boxWidth: string;
   gap: string;
 }) => {
@@ -16,7 +17,9 @@ const ImgBoxContainer = (props: {
           key={`image_${i}`}
           src={v}
           alt={`image_${i}`}
+          index={i}
           boxWidth={props.boxWidth}
+          setImgList={props.setImgList}
         />
       ))}
     </div>

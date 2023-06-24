@@ -59,6 +59,7 @@ function App() {
         {imgList && (
           <ImgBoxContainer
             imgList={imgList}
+            setImgList={setImgList}
             boxWidth={boxWidth + "px"}
             gap={gap + "px"}
           />
