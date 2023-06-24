@@ -17,7 +17,7 @@ function App() {
     if (galleryRef.current && imgList) {
       galleryRef.current.classList.toggle(
         "scroll",
-        window.innerWidth > 500 ? imgList.length > 5 : imgList.length > 4
+        window.innerWidth > 500 ? imgList.length > 5 : imgList.length > 3
       );
     }
   };
