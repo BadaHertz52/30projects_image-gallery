@@ -32,13 +32,22 @@ const FileContainer = (props: FileContainerProps) => {
   }, []);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
   return (
-    <div className="file-container" {...getRootProps()}>
+    <div
+      className="file-container"
+      data-testid="file-container"
+      {...getRootProps()}
+    >
       <div
         className={`plus-box ${isDragActive ? "on" : ""}`}
         onClick={() => inputRef.current?.click()}
         style={plusBoxStyle}
       >
-        <input type="file" ref={inputRef} {...getInputProps()} />
+        <input
+          type="file"
+          ref={inputRef}
+          data-testid="input-file"
+          {...getInputProps()}
+        />
         {isDragActive ? "drop down" : "+"}
       </div>
     </div>

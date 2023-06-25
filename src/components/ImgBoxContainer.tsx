@@ -11,7 +11,11 @@ const ImgBoxContainer = (props: {
     gap: props.gap,
   };
   return (
-    <div className="img-box-container" style={imgBoxContainerStyle}>
+    <div
+      className="img-box-container"
+      data-testid="img-box-container"
+      style={imgBoxContainerStyle}
+    >
       {props.imgList.map((v, i) => (
         <ImgBox
           key={`image_${i}`}
