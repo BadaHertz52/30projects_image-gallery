@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import "../assets/App.css";
 import GalleryBox from "./GalleryBox";
 
