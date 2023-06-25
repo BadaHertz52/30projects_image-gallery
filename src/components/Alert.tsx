@@ -10,4 +10,4 @@ const Alert = () => {
   );
 };
 
-export default Alert;
+export default React.memo(Alert);

@@ -1,8 +1,8 @@
-import React, { CSSProperties, useEffect, useRef, useState } from "react";
-import "./assets/App.css";
-import ImgBoxContainer from "./components/ImgBoxContainer";
-import Alert from "./components/Alert";
-import FileContainer from "./components/FileContainer";
+import { CSSProperties, useCallback, useEffect, useRef, useState } from "react";
+import "../assets/App.css";
+import ImgBoxContainer from "./ImgBoxContainer";
+import Alert from "./Alert";
+import FileContainer from "./FileContainer";
 
 function App() {
   const [imgList, setImgList] = useState<string[]>();
@@ -13,15 +13,16 @@ function App() {
   const boxWidth: number = (totalWidth * 2) / 3;
   const gap: number = (totalWidth * 1) / 6;
   const galleryRef = useRef<HTMLDivElement>(null);
-  const handleGalleryOverflow = () => {
+  const handleGalleryOverflow = useCallback(() => {
     if (galleryRef.current && imgList) {
       galleryRef.current.classList.toggle(
         "scroll",
         window.innerWidth > 500 ? imgList.length > 5 : imgList.length > 3
       );
     }
-  };
-  const changeTotalWidth = () => {
+  }, [imgList]);
+
+  const changeTotalWidth = useCallback(() => {
     let newWidth: number = 0;
     const innerWidth = window.innerWidth;
     const galleryBoxWidth = document
@@ -38,7 +39,7 @@ function App() {
       }
       setTotalWidth(newWidth);
     }
-  };
+  }, [imgList]);
   window.onresize = () => {
     changeTotalWidth();
     handleGalleryOverflow();
