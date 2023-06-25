@@ -16,7 +16,7 @@ const ImgBox = (props: ImgBoxProps) => {
     props.setImgList((prev) => {
       let newImgList = prev ? [...prev] : undefined;
       newImgList?.splice(props.index, 1);
-      return newImgList;
+      return newImgList?.[0] ? newImgList : undefined;
     });
   };
   const toggleClass = (event: MouseEvent) => {
