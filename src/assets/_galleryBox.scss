@@ -1,0 +1,14 @@
+.gallery-box {
+  width: calc(100vw - 60px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+  &.row {
+    flex-direction: row;
+  }
+  &.scroll {
+    overflow-x: scroll;
+  }
+}

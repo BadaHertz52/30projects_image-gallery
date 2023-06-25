@@ -1,3 +1,7 @@
+.alert {
+  text-align: center;
+}
+
 .plus-box {
   border: 1px solid black;
   font-size: 24px;
@@ -14,6 +18,21 @@
 }
 .plus-box input {
   display: none;
+}
+
+.gallery-box {
+  width: calc(100vw - 60px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.gallery-box.row {
+  flex-direction: row;
+}
+.gallery-box.scroll {
+  overflow-x: scroll;
 }
 
 .img-box-container {
@@ -212,23 +231,4 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.gallery-box {
-  width: calc(100vw - 60px);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 16px;
-}
-.gallery-box.row {
-  flex-direction: row;
-}
-.gallery-box.scroll {
-  overflow-x: scroll;
-}
-
-.alert {
-  text-align: center;
 }/*# sourceMappingURL=App.css.map */
