@@ -6,7 +6,7 @@ import {
   useRef,
 } from "react";
 import { useDropzone } from "react-dropzone";
-type FileContainerProps = {
+export type FileContainerProps = {
   setImgList: Dispatch<SetStateAction<string[] | undefined>>;
   boxWidth: string;
 };
@@ -41,6 +41,7 @@ const FileContainer = (props: FileContainerProps) => {
         className={`plus-box ${isDragActive ? "on" : ""}`}
         onClick={() => inputRef.current?.click()}
         style={plusBoxStyle}
+        data-testid="plus-box"
       >
         <input
           type="file"
