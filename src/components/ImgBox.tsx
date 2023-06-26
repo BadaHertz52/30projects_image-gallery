@@ -1,6 +1,6 @@
 import { CSSProperties, Dispatch, MouseEvent, SetStateAction } from "react";
 
-type ImgBoxProps = {
+export type ImgBoxProps = {
   src: string;
   alt: string;
   index: number;
@@ -28,10 +28,11 @@ const ImgBox = (props: ImgBoxProps) => {
   };
 
   return (
-    <div className="img-box" style={imgStyle}>
+    <div className="img-box" data-testid="img-box" style={imgStyle}>
       <img src={props.src} alt={props.alt} />
       <div
         className="btn-container"
+        data-testid="btn-container"
         onMouseEnter={(event) => toggleClass(event)}
         onMouseLeave={(event) => toggleClass(event)}
       >
