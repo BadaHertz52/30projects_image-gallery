@@ -1,5 +1,7 @@
 # 🤳Image Gallery
 
+[🖱️ 프로젝트 페이지 바로가기](https://badahertz52.github.io/30projects_image-gallery/)
+
 ### Index
 
 #### <a href="#introduce">1. 프로젝트 소개</a>
@@ -95,3 +97,9 @@ function MyDropzone() {
 ```
 
 getRootProps 는 드래그 앤 드롭 영역을 설정하는 데 사용되고, getInputProps는 파일을 업로드한 input 요소를 설정하는 데 사용된다.
+
+---
+
+#### 파비콘 출처
+
+- https://icons8.kr/icons
